@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: HGM;
+  src: url(../fonts/HankenGrotesk-Medium.ttf);
+}
+@font-face {
+  font-family: HGEB;
+  src: url(../fonts/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+  font-family: HGB;
+  src: url(../fonts/HankenGrotesk-Bold.ttf);
+}
+:root {
+  font-size: 18px;
+}
+body {
+  font-family: HGM;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 675px) {
+    min-height: 100vh;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 675px) {
+      flex-direction: row;
+      width: 650px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .top {
+      background: linear-gradient(180deg, #7857ff 0%, #2e2be9 60%);
+      color: #c8c7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      padding: 1rem 2rem;
+      width: 100%;
+      @media screen and (min-width: 675px) {
+        width: 50%;
+        border-radius: 2rem;
+        height: 100%;
+      }
+      span {
+        font-family: HGB;
+      }
+      div {
+        background: linear-gradient(0deg, #2421ca00 0%, #4e21ca 60%);
+        border-radius: 100%;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1rem 0;
+        h1 {
+          color: white;
+          font-size: 3rem;
+          font-family: HGEB;
+        }
+        h2 {
+          font-size: 0.5rem;
+          color: hsla(0, 0%, 100%, 0.5);
+        }
+      }
+      h3 {
+        color: white;
+        font-size: 2rem;
+        font-family: HGEB;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+    .bot {
+      color: hsl(224, 30%, 27%);
+      padding: 1rem;
+      width: 100%;
+      @media screen and (min-width: 675px) {
+        width: 50%;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      div {
+        margin-top: 0.8rem;
+        display: grid;
+        grid-template-areas: "icon title span span number";
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        img {
+          grid-area: icon;
+          width: 1rem;
+          height: 1rem;
+        }
+        h3 {
+          grid-area: title;
+          font-size: 1rem;
+          margin-left: -2rem;
+          font-family: HGEB;
+          @media screen and (min-width: 675px) {
+            margin-left: -1rem;
+          }
+        }
+        span {
+          grid-area: number;
+          font-family: HGEB;
+          color: hsla(224, 30%, 27%, 0.5);
+          strong {
+            color: hsl(224, 30%, 27%);
+          }
+        }
+      }
+      &-rea {
+        color: hsl(0, 100%, 67%);
+        background-color: hsla(0, 100%, 67%, 0.1);
+      }
+      &-mem {
+        color: hsl(39, 100%, 56%);
+        background-color: hsla(39, 100%, 56%, 0.1);
+      }
+      &-ver {
+        color: hsl(166, 100%, 37%);
+        background-color: hsla(166, 100%, 37%, 0.1);
+      }
+      &-vis {
+        color: hsl(234, 85%, 45%);
+        background-color: hsla(234, 85%, 45%, 0.1);
+      }
+      button {
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+        color: hsl(221, 100%, 96%);
+        background-color: hsl(224, 30%, 27%);
+        border: none;
+        outline: none;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        font-size: 1rem;
+        font-family: HGEB;
+        cursor: pointer;
+        &:hover {
+          background: linear-gradient(180deg, #7857ff 0%, #2e2be9 100%);
+        }
+      }
+    }
+  }
+}
